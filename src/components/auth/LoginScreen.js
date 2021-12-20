@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { useDispatch, useSelector } from 'react-redux';
@@ -48,7 +49,7 @@ export const LoginScreen = () => {
     return (
         <>
             <h3 className='auth__title'>Login</h3>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleLogin} className='animate__animated animate__fadeIn animate__faster '>
                 {
                     msgError &&
                     (
@@ -93,7 +94,7 @@ export const LoginScreen = () => {
                         </p>
                     </div>
                 </div>
-                <Link to='/auth/register' className='link'>
+                <Link to='/auth/register' className='link '>
                     Crear una cuenta nueva
                 </Link>
             </form>
